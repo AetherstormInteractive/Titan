@@ -30,7 +30,7 @@
 *.exe
 *.out
 *.app
-/.vs/Titan/v17
+/.vs
 /bin
 /bin-int
 /lib
