@@ -9,7 +9,6 @@ Visual Studio 2022 Build Tools
 ```
 git clone --recursive <repo url>
 run CMake Generation Batch Files
-open bgfx.sln and update it to the Windows 10 latest SDK
 run Build Library Batch Files for both configs
 ```
 
