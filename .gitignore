@@ -31,3 +31,6 @@
 *.out
 *.app
 /.vs/Titan/v17
+/bin
+/bin-int
+/lib
