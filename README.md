@@ -24,7 +24,7 @@ https://github.com/wgois/OIS
 https://github.com/bulletphysics/bullet3  
 ### Systems
 https://github.com/skypjack/entt  
-https://github.com/wqking/eventpp
+https://github.com/wqking/eventpp  
 https://github.com/gabime/spdlog  
 ### Math
 https://github.com/g-truc/glm
