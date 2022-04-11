@@ -1,0 +1,36 @@
+[submodule "3rdparty/DiligentEngine"]
+	path = 3rdparty/DiligentEngine
+	url = https://github.com/DiligentGraphics/DiligentEngine.git
+[submodule "3rdparty/OIS"]
+	path = 3rdparty/OIS
+	url = https://github.com/wgois/OIS
+[submodule "3rdparty/Bullet3"]
+	path = 3rdparty/Bullet3
+	url = https://github.com/bulletphysics/bullet3
+[submodule "3rdparty/EnTT"]
+	path = 3rdparty/EnTT
+	url = https://github.com/skypjack/entt
+[submodule "3rdparty/Eventpp"]
+	path = 3rdparty/Eventpp
+	url = https://github.com/wqking/eventpp
+[submodule "3rdparty/SpdLog"]
+	path = 3rdparty/SpdLog
+	url = https://github.com/gabime/spdlog
+[submodule "3rdparty/GLM"]
+	path = 3rdparty/GLM
+	url = https://github.com/g-truc/glm
+[submodule "3rdparty/OpenAL-Soft"]
+	path = 3rdparty/OpenAL-Soft
+	url = https://github.com/kcat/openal-soft
+[submodule "3rdparty/SDL2"]
+	path = 3rdparty/SDL2
+	url = https://github.com/libsdl-org/SDL
+[submodule "3rdparty/GLFW"]
+	path = 3rdparty/GLFW
+	url = https://github.com/glfw/glfw
+[submodule "3rdparty/Ozz Animation"]
+	path = 3rdparty/Ozz Animation
+	url = https://github.com/guillaumeblanc/ozz-animation
+[submodule "3rdparty/Box2D"]
+	path = 3rdparty/Box2D
+	url = https://github.com/erincatto/box2d
