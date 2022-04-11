@@ -27,13 +27,13 @@ namespace Titan
 		while (!glfwWindowShouldClose(window))
 		{
 			ren->render();
+			glfwSwapBuffers(window);
 			glfwPollEvents();
 		}
 	}
 
 	void Window::release()
 	{
-		bgfx::shutdown();
 		glfwDestroyWindow(window);
 		glfwTerminate();
 	}

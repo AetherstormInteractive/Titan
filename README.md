@@ -22,6 +22,7 @@ https://github.com/guillaumeblanc/ozz-animation
 ### Input
 https://github.com/wgois/OIS  
 ### Physics
+https://github.com/erincatto/box2d
 https://github.com/bulletphysics/bullet3  
 ### Systems
 https://github.com/skypjack/entt  
