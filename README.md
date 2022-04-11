@@ -1,11 +1,12 @@
 # Titan
 Titan is a custom 2D/3D game engine developed by Aetherstorm Interactive. It is currently under development.
 
-## Build Instructions
+## Build
 ### Requirements
 Visual Studio 2022  
 Visual Studio 2022 Build Tools
 
+### Instructions
 ```
 git clone --recursive <repo url>
 run CMake Generation Batch Files
