@@ -1,11 +1,12 @@
 #pragma once
 #include <stdio.h>
+#include "Core.h"
 
 #include "Renderer.h"
 
 namespace Titan
 {
-	class __declspec(dllexport) Window
+	class TITAN_API Window
 	{
 	public:
 

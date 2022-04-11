@@ -121,10 +121,13 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);TITAN_WINDOWS;TITAN_BUILD_DLL</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>D:\Projects\Titan\3rdparty\GLFW\include;D:\Projects\Titan\3rdparty\GLM;D:\Projects\Titan\Titan\Renderer\src;D:\Projects\Titan\Titan\Physics\src;D:\Projects\Titan\Titan\Audio\src;D:\Projects\Titan\Titan\Input\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\Projects\Titan\lib\GLFW\src\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -136,28 +139,31 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);TITAN_WINDOWS;TITAN_BUILD_DLL</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>D:\Projects\Titan\3rdparty\GLFW\include;D:\Projects\Titan\3rdparty\GLM;D:\Projects\Titan\Titan\Renderer\src;D:\Projects\Titan\Titan\Physics\src;D:\Projects\Titan\Titan\Audio\src;D:\Projects\Titan\Titan\Input\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\Projects\Titan\lib\GLFW\src\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Engine\src\Titan\Application.cpp" />
-    <ClCompile Include="Renderer\src\Mesh.cpp" />
-    <ClCompile Include="Renderer\src\Model.cpp" />
     <ClCompile Include="Renderer\src\Renderer.cpp" />
     <ClCompile Include="Renderer\src\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Audio\src\Core.h" />
     <ClInclude Include="Engine\src\Titan.h" />
     <ClInclude Include="Engine\src\Titan\Application.h" />
     <ClInclude Include="Engine\src\Titan\Core.h" />
     <ClInclude Include="Engine\src\Titan\EntryPoint.h" />
-    <ClInclude Include="Renderer\src\Mesh.h" />
-    <ClInclude Include="Renderer\src\Model.h" />
+    <ClInclude Include="Input\src\Core.h" />
+    <ClInclude Include="Physics\src\Core.h" />
+    <ClInclude Include="Renderer\src\Core.h" />
     <ClInclude Include="Renderer\src\Renderer.h" />
     <ClInclude Include="Renderer\src\Window.h" />
   </ItemGroup>
