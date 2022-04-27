@@ -16,19 +16,19 @@ run generation batch files
 
 ## Credits
 ### Rendering
-https://github.com/DiligentGraphics/DiligentEngine  
-https://github.com/guillaumeblanc/ozz-animation
+https://github.com/google/filament  
+https://github.com/guillaumeblanc/ozz-animation  
 ### Input
 https://github.com/wgois/OIS  
 ### Physics
-https://github.com/erincatto/box2d
+https://github.com/erincatto/box2d  
 https://github.com/bulletphysics/bullet3  
 ### Systems
 https://github.com/skypjack/entt  
 https://github.com/wqking/eventpp  
 https://github.com/gabime/spdlog  
 ### Math
-https://github.com/g-truc/glm
+https://github.com/g-truc/glm  
 ### Audio
 https://github.com/kcat/openal-soft  
 ### Windowing
