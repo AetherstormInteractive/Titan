@@ -9,8 +9,7 @@ Visual Studio 2022 Build Tools
 ### Instructions
 ```
 git clone --recursive <repo url>
-run CMake Generation Batch Files
-run Build Library Batch Files for both configs
+run generation batch files
 ```
 
 ## Changelog
