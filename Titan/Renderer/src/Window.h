@@ -9,7 +9,7 @@ namespace Titan
 	class TITAN_API Window
 	{
 	public:
-
+		
 		Renderer* ren = new Renderer();
 		void init();
 		void run();

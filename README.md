@@ -9,6 +9,7 @@ Visual Studio 2022 Build Tools
 ### Instructions
 ```
 git clone --recursive <repo url>
+download latest release for windows from https://github.com/AetherstormInteractive/filament and place folder named "filament" into 3rdparty folder
 run generation batch files
 ```
 
