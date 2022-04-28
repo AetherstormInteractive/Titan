@@ -120,14 +120,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);TITAN_WINDOWS;TITAN_BUILD_DLL</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>D:\Projects\Titan\3rdparty\GLFW\include;D:\Projects\Titan\3rdparty\GLM;D:\Projects\Titan\Titan\Renderer\src;D:\Projects\Titan\Titan\Physics\src;D:\Projects\Titan\Titan\Audio\src;D:\Projects\Titan\Titan\Input\src</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>D:\Projects\Titan\3rdparty\GLFW\include;D:\Projects\Titan\3rdparty\GLM;D:\Projects\Titan\Titan\Renderer\src;D:\Projects\Titan\Titan\Physics\src;D:\Projects\Titan\Titan\Audio\src;D:\Projects\Titan\Titan\Input\src;D:\Projects\Titan\3rdparty\filament\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>D:\Projects\Titan\lib\GLFW\src\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\Projects\Titan\libs\GLFW\src\Debug;D:\Projects\Titan\3rdparty\filament\lib\x86_64\mdd;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;filament.lib;filabridge.lib;filaflat.lib;utils.lib;smol-v.lib;backend.lib;bluegl.lib;opengl32.lib;bluevk.lib;vkshaders.lib;ibl.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
