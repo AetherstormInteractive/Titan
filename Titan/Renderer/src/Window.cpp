@@ -1,24 +1,16 @@
 #include "Window.h"
 
-#define WNDW_WIDTH 1600
-#define WNDW_HEIGHT 900
+int win_w, win_h;
 
 namespace Titan
 {
 	void Window::init()
 	{
 		glfwInit();
-		window = glfwCreateWindow(WNDW_WIDTH, WNDW_HEIGHT, "Titan Game", NULL, NULL);
-		ren->init(window);
+		glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
+		window = glfwCreateWindow(1600, 900, "Titan Game", NULL, NULL);
 		isRunning = true;
-		if (!ren->init(window))
-		{
-			printf("Renderer could not be initialized!\n");
-		}
-		else
-		{
-			printf("Renderer running!\n");
-		}
+		ren->init(window);
 
 	}
 
@@ -26,6 +18,8 @@ namespace Titan
 	{
 		while (!glfwWindowShouldClose(window))
 		{
+			glfwGetWindowSize(window, &win_w, &win_h);
+			ren->update(window, win_w, win_h);
 			ren->render();
 			glfwSwapBuffers(window);
 			glfwPollEvents();

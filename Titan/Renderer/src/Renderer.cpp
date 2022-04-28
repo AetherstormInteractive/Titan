@@ -1,33 +1,42 @@
 #include "Renderer.h"
-#include "utils/EntityManager.h"
-#include "filament/Engine.h"
-#include "filament/SwapChain.h"
-#include "filament/Renderer.h"
-#include "filament/View.h"
 
 namespace Titan
 {
-
-	bool Renderer::init(GLFWwindow* win)
+	void Renderer::init(GLFWwindow* win)
 	{
-		filament::Engine* engine = filament::Engine::create();
-		filament::SwapChain* swapChain = engine->createSwapChain(glfwGetWin32Window(win));
-		filament::Renderer* renderer = engine->createRenderer();
+		engine = filament::Engine::create();
+		swapChain = engine->createSwapChain(glfwGetWin32Window(win));
+		renderer = engine->createRenderer();
 
-		filament::Camera* camera = engine->createCamera(utils::EntityManager::get().create());
-		filament::View* view = engine->createView();
-		filament::Scene* scene = engine->createScene();
+		camera = engine->createCamera(utils::EntityManager::get().create());
+		view = engine->createView();
+		scene = engine->createScene();
 
-		view->setCamera(camera);
+		skybox = filament::Skybox::Builder().color({ 0.1, 0.125, 0.25, 1.0 }).build(*engine);
+		scene->setSkybox(skybox);
+		view->setPostProcessingEnabled(false);
+	}
+
+	bool Renderer::update(GLFWwindow* win, uint32_t win_w, uint32_t win_h)
+	{
+		camera->setExposure(16.0f, 1 / 125.0f, 100.0f);
+		camera->setExposure(100.0f);
+		camera->setProjection(45.0f, float(win_w) / win_h, 0.1f, 100.0f);
+		camera->lookAt({ 0, 0, 10.0 }, { 0, 0, 0 }, { 0, 1, 0 });
+
+		view->setViewport({ 0, 0, win_w, win_h });
 		view->setScene(scene);
+		view->setCamera(camera); /* When we don't set the camera we run into a segfault. */
 		return true;
 	}
 
-	unsigned int counter = 0;
-
 	void Renderer::render()
 	{
-
+		if (renderer->beginFrame(swapChain))
+		{
+			renderer->render(view);
+			renderer->endFrame();
+		}
 	}
 
 	void Renderer::draw()
