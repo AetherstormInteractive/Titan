@@ -31,6 +31,3 @@
 [submodule "3rdparty/Box2D"]
 	path = 3rdparty/Box2D
 	url = https://github.com/erincatto/box2d
-[submodule "3rdparty/filament"]
-	path = 3rdparty/filament
-	url = https://github.com/google/filament
