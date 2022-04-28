@@ -24,12 +24,15 @@ namespace Titan
 			glfwSwapBuffers(window);
 			glfwPollEvents();
 		}
+		ren->release();
+		release();
 	}
 
 	void Window::release()
 	{
 		glfwDestroyWindow(window);
 		glfwTerminate();
+		delete ren;
 	}
 
 }
