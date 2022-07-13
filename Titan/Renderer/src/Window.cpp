@@ -1,3 +1,4 @@
+#include <iostream>
 #include "Window.h"
 
 int win_w, win_h;
@@ -16,16 +17,12 @@ namespace Titan
 
 	void Window::run()
 	{
-		while (!glfwWindowShouldClose(window))
-		{
+		std::cout << "render" << std::endl;
 			glfwGetWindowSize(window, &win_w, &win_h);
 			ren->update(window, win_w, win_h);
 			ren->render();
 			glfwSwapBuffers(window);
 			glfwPollEvents();
-		}
-		ren->release();
-		release();
 	}
 
 	void Window::release()

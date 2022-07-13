@@ -10,6 +10,7 @@ namespace Titan
 		virtual ~Application();
 
 		void Run();
+		void FixedUpdate();
 	};
 
 	Application* CreateApp();
