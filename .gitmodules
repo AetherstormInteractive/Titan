@@ -31,3 +31,6 @@
 [submodule "3rdparty/Box2D"]
 	path = 3rdparty/Box2D
 	url = https://github.com/erincatto/box2d
+[submodule "3rdparty/glad"]
+	path = 3rdparty/glad
+	url = https://github.com/AetherstormInteractive/TitanGlad
